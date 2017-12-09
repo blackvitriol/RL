@@ -28,3 +28,7 @@ pip install gym
 ### 1. Cart-Mountain
 
 ![Cart-Mountain results](results/results_mountaincar.png)
+
+### 2. Pong
+
+![Pong results](results/results_pong.png)
