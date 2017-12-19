@@ -32,3 +32,7 @@ pip install gym
 ### 2. Pong
 
 ![Pong results](results/results_pong.png)
+
+### 2. Pendulum
+
+![Pong results](results/results_pendulum.png)
