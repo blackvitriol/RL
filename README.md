@@ -1,5 +1,5 @@
 # Reinforcement Learning
-RL is becoming my favoutire algorithm to train intelligent agents. I am developing a general AI agent that will learn from me and be able to play any game.
+RL is becoming my favoutire algorithm to train intelligent agents. I am developing a general AI agent that will learn from me and will be able to play any game.
 
 > This repo contains code for agents that I have trained on OpenAI's Gym or Universe and other virtual environments.
 
