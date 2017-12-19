@@ -35,4 +35,4 @@ pip install gym
 
 ### 2. Pendulum
 
-![Pong results](results/pendulum.png)
+![Pong results](https://github.com/blackvitriol/RL/blob/master/results/results_pendulum.png)
