@@ -35,4 +35,4 @@ pip install gym
 
 ### 2. Pendulum
 
-![Pong results](results/2017-12-16 20-45-23.png)
+![Pong results](results/pendulum.png)
