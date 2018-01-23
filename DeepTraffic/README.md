@@ -11,7 +11,7 @@ DeepTraffic was originally created for a class Fridman teaches at MIT. It gained
 
 ## Submission:
 
-![results(/results.gif)
+![results](/results.gif)
 
 The attached net.js file contains code for ~70mph speed.
 This is not the final submission because there are some remaining modifications, after which I will train the network again.
