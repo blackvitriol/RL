@@ -1,21 +1,24 @@
-
 //<![CDATA[
+// DQN for DeepTraffic by A7
 
-// a few things don't have var in front of them - they update already existing variables the game needs
+// Variables to create state
 lanesSide = 2;
 patchesAhead = 7;
 patchesBehind = 3;
-trainIterations = 20000;
+
+//Variables for Neural Network
+trainIterations = 10000;
 
 // the number of other autonomous vehicles controlled by your network
-otherAgents = 2; // max of 9
+otherAgents = 3; // max of 9
 
+// Network Model Configuration
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
-var temporal_window = 3;
+var temporal_window = 5;
 var network_size = num_inputs * temporal_window + num_actions * temporal_window + num_inputs;
 
-// Define NN model layers
+// NN Model Architecture
 
 var layer_defs = [];
     layer_defs.push({
@@ -63,5 +66,26 @@ draw_stats();
 
 return action;
 }
+
+/* DQN with Experience Replay, Fixed Target Network, Reward Clipping, Skipping Frames
+
+initialize replay memory D
+initialize Q-network with random weights
+observe initial s (forward pass)
+	repeat:
+		select action a:
+			with random probability epsilon, select random action
+			otherwise select a = argmax[Q(s,a')]
+		execute action a
+		observe reward r and new state s'
+		store experience <s,a,r,s'> in D
+		sample random transitions <ss,aa,rr,ss'> from DQN
+		calculate target for each minibatch transition:
+			if ss' is terminal state then tt=rr
+			else tt=rr+ gamma(max.Q(ss',aa'))
+		train network using (tt-Q(ss,aa))^2 as loss
+		s=s'
+	end
+*/
 
 //]]>
