@@ -29,7 +29,12 @@ var layer_defs = [];
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 1,
+    num_neurons: 10,
+    activation: 'relu'
+});
+layer_defs.push({
+    type: 'fc',
+    num_neurons: 10,
     activation: 'relu'
 });
 layer_defs.push({
@@ -43,9 +48,9 @@ var tdtrainer_options = { learning_rate: 0.01, momentum: 0.0, batch_size: 16, l2
 
 var opt = {};
 opt.temporal_window = temporal_window;
-opt.experience_size = 3000;
+opt.experience_size = 3000; // increase experience size
 opt.start_learn_threshold = 500;
-opt.gamma = 0.7;
+opt.gamma = 0.7; // high initial gamme
 opt.learning_steps_total = 10000;
 opt.learning_steps_burnin = 1000;
 opt.epsilon_min = 0.0;
